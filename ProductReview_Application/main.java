@@ -86,6 +86,7 @@ class Application {
         p.add(new Product("YZA", 5, "This is another great product!"));
         p.add(new Product("BCD", 1, "This is another bad product."));
     }
+    
 
     // A method to evaluate the rating and review of a given product
     public void evaluateProduct(String productName) {
@@ -113,8 +114,10 @@ class Application {
         
         // Print the first 5 products in the list
         System.out.println("Top 5 Products:");
+        System.out.println("-----------------");
         for (int i = 0; i < 5; i++) {
             p.get(i).printProduct();
+            System.out.println("----------------------------------");
         }
         
     }
@@ -131,16 +134,19 @@ class Application {
          }
          
          // Print the bad products in the list
-         System.out.println("Products with Not Satisfactory Rating:");
+         System.out.println("\n\n");
+         System.out.println("=========================================");
+         System.out.println("\nProducts with Not Satisfactory Rating:");
          for (Product pro : badProducts) {
              pro.printProduct();
+             System.out.println("=========================================");
          }
          
      }
 }
 
 // A class to test the application
-class main {
+class Main {
 
      public static void main(String[] args) {
 
@@ -150,10 +156,10 @@ class main {
          // Test some sample cases
 
          // Evaluate a product with name ABC
-         app.evaluateProduct("ABC");
+         //app.evaluateProduct("ABC");
 
          // Evaluate a product with name EFG
-         app.evaluateProduct("EFG");
+        // app.evaluateProduct("EFG");
 
          // Display the top 5 products
          app.displayTopProducts();
